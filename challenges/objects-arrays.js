@@ -21,7 +21,11 @@ const tyrannosaurus = new Dinosaur({
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceous',
-  });
+  }
+  
+  );
+  
+            //STILL NEED TO FIX THIS!!!
 
   Dinosaur.prototype.roar = function(){
     console.log('RAWERSRARARWERSARARARRRR!')
@@ -106,8 +110,9 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+// const uni = [];
 
+uni = graduates.map(graduates => graduates.university.includes('Uni'));
 
 console.log(uni);
 
@@ -134,6 +139,11 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+
+zooAnimals.forEach((element) => {
+  return animalNames.push(`Name: ${element.animal_name}, ${element.scientific_name}`)
+});
+
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -142,7 +152,10 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+// const lowerCase = [];
+
+lowerCase = zooAnimals.map(zooAnimals => zooAnimals.animal_name.toLowerCase());
+
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -150,7 +163,10 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = [];
+// const lowerPopulation = [];
+
+lowerPopulation = zooAnimals.filter(zooAnimals => zooAnimals.population < 5);
+
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
@@ -159,7 +175,10 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
-console.log(populationTotal);
+
+
+
+console.log(populationTotal.reduce());
 
 
 /* 
