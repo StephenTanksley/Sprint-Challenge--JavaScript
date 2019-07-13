@@ -18,23 +18,24 @@ function consume(param1, param2, cb) {
 */
 
 function add(param1, param2) {
+  // console.log(param1 + param2); TEST CASE. IGNORE, PLEASE!
   return param1 + param2;
 }
 
 function multiply(param1, param2) {
+  // console.log(param1 * param2); TEST CASE. IGNORE, PLEASE!
   return param1 * param2;
 }
 
 function greeting(param1, param2){
-  return param1  + param2  + ", nice to meet you!";
+  // console.log(param1 + " "+ param2  + ", nice to meet you!"); TEST CASE. IGNORE, PLEASE!
+  return param1 + " "+ param2  + ", nice to meet you!";
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 consume(2,2,add); // 4
 consume(10,16,multiply); // 160
-
-
-console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+consume("Mary", "Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
