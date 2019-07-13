@@ -83,9 +83,14 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-// const universities = [];
+const universities = [];
 
-const universities = graduates.map(graduates => graduates.university);
+//THIS CODE ALSO WORKS AND DOESN'T REQUIRE ACCUMULATOR.
+// const universities = graduates.map(graduates => graduates.university);
+
+graduates.forEach((graduates) => {
+  return universities.push(`${graduates.university}`);
+})
 
 console.log(universities);
 
@@ -107,7 +112,7 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 // const uni = [];
 
-uni = graduates.map(graduates => graduates.university.includes('Uni'));
+const uni = graduates.map(graduates => graduates.university.includes('Uni'));
 
 console.log(uni);
 
