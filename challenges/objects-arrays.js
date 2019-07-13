@@ -14,6 +14,10 @@ function Dinosaur(dinoAttributes) {
   this.period = dinoAttributes.period;
 };
 
+Dinosaur.prototype.roar = function(){
+  return "RAWERSRARARWERSARARARRRR!";
+};
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 const tyrannosaurus = new Dinosaur({
   species: 'Tyrannosaurus',
@@ -21,12 +25,7 @@ const tyrannosaurus = new Dinosaur({
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceous',
-  })
-
-  // roar: function(){
-  //   console.log('RAWERSRARARWERSARARARRRR!')
-  // }
-  // );
+});
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus = new Dinosaur({
@@ -62,10 +61,8 @@ console.log(stegosaurus.length);
 // What time period did tyrannosaurus live in?
 console.log(tyrannosaurus.period);
 
-
-//NEED TO FIX THIS.
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-// console.log(tyrannosaurus.roar());
+console.log(tyrannosaurus.roar());
 
 
 // ==== Arrays ====
