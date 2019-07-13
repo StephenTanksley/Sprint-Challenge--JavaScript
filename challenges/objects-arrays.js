@@ -21,15 +21,12 @@ const tyrannosaurus = new Dinosaur({
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceous',
-  }
-  
-  );
-  
-            //STILL NEED TO FIX THIS!!!
+  })
 
-  Dinosaur.prototype.roar = function(){
-    console.log('RAWERSRARARWERSARARARRRR!')
-  }
+  // roar: function(){
+  //   console.log('RAWERSRARARWERSARARARRRR!')
+  // }
+  // );
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus = new Dinosaur({
@@ -66,8 +63,9 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 
+//NEED TO FIX THIS.
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tyrannosaurus.roar());
+// console.log(tyrannosaurus.roar());
 
 
 // ==== Arrays ====
@@ -174,11 +172,13 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+// const populationTotal = 0;
 
+populationTotal = zooAnimals.reduce((total, zooAnimals) => {
+  return total + zooAnimals.population;
+}, 0);
 
-
-console.log(populationTotal.reduce());
+console.log(populationTotal);
 
 
 /* 
