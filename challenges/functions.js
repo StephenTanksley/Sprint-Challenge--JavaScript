@@ -29,7 +29,7 @@ function multiply(param1, param2) {
 
 function greeting(param1, param2){
   // console.log(param1 + " "+ param2  + ", nice to meet you!"); TEST CASE. IGNORE, PLEASE!
-  return param1 + " "+ param2  + ", nice to meet you!";
+  return param1 + " " + param2 + ", nice to meet you!";
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
